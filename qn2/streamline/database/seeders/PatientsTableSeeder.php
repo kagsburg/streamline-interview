@@ -43,16 +43,5 @@ class PatientsTableSeeder extends Seeder
         foreach(array_chunk($data,1000) as $data){
             Patient::insert($data);
         }
-        // Patient::chunk(1000, function ($patients) {
-        //     foreach ($patients as $patient) {
-        //         $appointment = Appointment::factory()->create([
-        //             'patient_id' => $patient->id,
-        //         ]);
-        //         $medicalRecord = MedicalRecord::factory()->create([
-        //             'patient_id' => $patient->id,
-        //             'appointment_id' => $appointment->id,
-        //         ]);
-        //     }
-        // });
     }
 }
